@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Character Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Star Wars Character Explorer</h1>
+        
+        <button id="getRandomCharacter">
+            <i class="fas fa-rocket"></i> Discover a Random Character
+        </button>
+        
+        <div id="loading" class="loading hidden">
+            <i class="fas fa-spinner fa-spin"></i> 
+            Traveling through hyperspace...
+        </div>
+        
+        <div id="error" class="error hidden">
+            <i class="fas fa-exclamation-triangle"></i>
+            Failed to retrieve data from the galaxy. The Empire might be blocking our transmissions!
+        </div>
+        
+        <div id="characterCard" class="character-card hidden">
+            <h2 id="characterName"></h2>
+            <div class="character-info">
+                <div class="info-item">
+                    <span class="info-label">Height:</span>
+                    <span id="characterHeight" class="info-value"></span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Gender:</span>
+                    <span id="characterGender" class="info-value"></span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Birth Year:</span>
+                    <span id="characterBirth" class="info-value"></span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Home World:</span>
+                    <span id="characterHomeworld" class="info-value"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Data provided by SWAPI.tech - The Star Wars API
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

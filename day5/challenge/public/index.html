@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="welcomeScreen" class="screen welcome-screen active">
+            <div class="welcome">
+                <h1>🎮 Emoji Guessing Game 🎲</h1>
+                <p>Test your emoji knowledge! Guess the correct name of each emoji to score points.</p>
+            </div>
+            <input type="text" id="usernameInput" placeholder="Enter your name" style="padding: 12px; width: 100%; margin-bottom: 20px; border-radius: 8px; border: 2px solid #d0d7ff;">
+            <button id="startGameBtn" class="button-primary">Start Game</button>
+        </div>
+        
+        <div id="gameScreen" class="screen game-area">
+            <div class="score-display">Score: <span id="scoreValue">0</span></div>
+            <div class="timer-bar">
+                <div id="timerFill" class="timer-fill"></div>
+            </div>
+            <div id="emojiDisplay" class="emoji-display"></div>
+            <button id="hintBtn" class="hint-btn">Get Hint (Cost: 1 point)</button>
+            <div id="hintText" class="hint-text"></div>
+            <div id="options" class="options">
+            </div>
+            <div id="feedback" class="feedback"></div>
+            <button id="nextQuestionBtn" class="button-primary" style="display: none;">Next Question</button>
+        </div>
+        
+        <div id="gameOverScreen" class="screen game-over">
+            <h1>Game Over!</h1>
+            <h2>Your Final Score: <span id="finalScore">0</span></h2>
+            <button id="playAgainBtn" class="button-primary">Play Again</button>
+            <button id="showLeaderboardBtn" class="button-primary">Show Leaderboard</button>
+        </div>
+        
+        <div id="leaderboardScreen" class="screen">
+            <h1>Top Scores</h1>
+            <table id="leaderboardTable">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button id="backToGameBtn" class="button-primary">Back to Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
